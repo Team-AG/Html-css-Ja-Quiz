@@ -1,0 +1,73 @@
+    body {
+        color: antiquewhite;
+    }
+    
+    .choice-container {
+        display: flex;
+        margin-bottom: 0.8rem;
+        width: 100%;
+        border-radius: 4px;
+        background: rgb(62, 136, 214);
+        font-size: 3rem;
+        min-width: 80rem;
+    }
+    
+    .choice-container:hover {
+        cursor: pointer;
+        box-shadow: 0 0.4rem 1.4rem 0 rgba(44, 144, 190, 0.5);
+        transform: scale(1.02);
+        transform: transform 100ms;
+    }
+    
+    .choice-prefix {
+        padding: 2rem 2.5rem;
+        color: white;
+    }
+    
+    .choice-text {
+        padding: 2rem;
+        width: 100%;
+    }
+    
+    .correct {
+        background: linear-gradient(32deg, rgba(62, 226, 62, 0.596) 0%, rgb(28, 136, 28) 100%);
+    }
+    
+    .incorrect {
+        background: linear-gradient(32deg, rgba(255, 0, 0, 0.596) 0%, rgb(206, 22, 22) 100%);
+    }
+    
+    #hud {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .hud-prefix {
+        text-align: center;
+        font-size: 2rem;
+    }
+    
+    .hud-main-text {
+        text-align: center;
+    }
+    
+    #progressBar {
+        width: 20rem;
+        height: 3rem;
+        border: 0.2rem solid rgb(28, 136, 28);
+        margin-top: 2rem;
+        border-radius: 50px;
+        overflow: hidden;
+    }
+    
+    #progressBar-Full {
+        height: 100%;
+        background: rgb(28, 136, 28);
+        width: 0%;
+    }
+    
+    @media screen and(max-width:768px) {
+        .choice-container {
+            min-width: 40rem;
+        }
+    }
