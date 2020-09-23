@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Code Quiz</title>
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans|Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <!--Link to stylesheet-->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <audio id="correctSound">
+      <source src="./assets/audio/265012__sethlind__toaster-oven-ding.wav" />
+    </audio>
+    <audio id="wrongSound">
+      <source src="./assets/audio/164090__hypocore__buzzer.wav" />
+    </audio>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="row">
+            <div class="logo">
+              <!--logo div-->
+              <p id="logo">CODE QUIZ</p>
+            </div>
+            <div class="col">
+              <div class="timer">
+                <!--timer div-->
+                <p class="timeCaption">TIME REMAINING:</p>
+                <p id="time">000</p>
+                <button id="startBtn" data-state="enabled">Start Quiz</button>
+              </div>
+              <div class="difficulty">
+                <!--difficulty div-->
+                <p class="difficultyCaption">SELECT DIFFICULTY:</p>
+                <div>
+                  <button id="easyBtn">Easy</button>
+                  <button id="hardBtn">Hard</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tabs">
+            <!--tabs div-->
+            <div id="instructionsTab">
+              <p>Instructions</p>
+            </div>
+            <div id="highScoresTab">
+              <p>High Scores</p>
+            </div>
+          </div>
+          <div class="responsive-links">
+            <h2><a href="./instructions.html">Instructions</a></h2>
+            <h2><a href="./highscores.html">High Scores</a></h2>
+          </div>
+          <div class="instructions">
+            <!--instructions div-->
+            <p>
+              First, select a difficulty mode. The questions are the same, but
+              you will have less time to answer them in hard mode.
+            </p>
+            <br />
+            <p>
+              Once you have selected a difficulty mode, click the "Start Quiz"
+              button. The timer will immediately start counting down. If it
+              reaches 0, the quiz will end.
+            </p>
+            <br />
+            <p>
+              Questions will appear one at a time. Click on your answer. You
+              will be informed whether your answer was correct or incorrect when
+              the next question appears. For each incorrect answer, there is a
+              10-second time penalty.
+            </p>
+          </div>
+          <div class="highScores">
+            <!--high scores div-->
+            <p id="noScoresStored">No high scores yet.</p>
+            <div class="scoreLine" id="scoreLine"></div>
+            <button id="clearHighScoresBtn">Clear High Scores</button>
+          </div>
+        </div>
+        <div class="questions">
+          <!--questions div-->
+          <p id="answerResult"></p>
+          <p id="questionNumber"></p>
+          <h1 id="questionHeader"></h1>
+          <div id="questionContainer"></div>
+          <!--Quiz-over screen-->
+          <h1 id="finalScore"></h1>
+          <p id="highScoreInstruction"></p>
+          <div id="enterScoreName"></div>
+          <p id="submitConfirm"></p>
+        </div>
+      </div>
+    </div>
+    <!--Linking javascript files-->
+    <script src="./assets/javascript/tabs.js"></script>
+    <script src="./assets/javascript/get-high-scores.js"></script>
+    <script src="./assets/javascript/clear-high-scores.js"></script>
+    <script src="./assets/javascript/questions.js"></script>
+    <script src="./assets/javascript/end-quiz.js"></script>
+    <script src="./assets/javascript/start-quiz.js"></script>
+  </body>
+</html>
